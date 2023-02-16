@@ -1,4 +1,4 @@
-# badger-pixel-client
+# Badger Pixel Client
 Badger 2040W client for the Raspberry Pi Pixel Server.
 
 ![Badger 2040W with client for Pixel Server](http://www.penguintutor.com/projects/images/badger2040w-withpixelclient.png)
