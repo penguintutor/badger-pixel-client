@@ -10,7 +10,7 @@ This needs the [Raspberry Pi Pixel Server](http://www.penguintutor.com/projects/
 
 * Install the Badger OS image from Pimoroni
 
-* Update the WiFi login information on the Badger 2040W
+* Update the WiFi login information on the Badger 2040W through the WIFI_CONFIG.py file
 
 * Copy all the .py files from this repository to the Badger 2040W. 
 This can be done through the Thonny Editor. Turn on the files view to allow you to upload directly, or open the files and use "Save As" selecting to the Raspberry Pi Pico as the destination.
