@@ -1,7 +1,8 @@
 # Badger Pixel Client
 Badger 2040W client for the Raspberry Pi Pixel Server.
 
-![Badger 2040W with client for Pixel Server](http://www.penguintutor.com/projects/images/badger2040w-withpixelclient.png)
+![Badger 2040W with client for Pixel Server](https://user-images.githubusercontent.com/5587863/219353152-2e3ba3c4-838e-43f3-b6aa-000b4cf7c385.png)
+
 
 This allows for the control of addressable RGB LED pixels (NeoPixels) using the Badger 2040W hackable ID badge with WiFi. 
 This needs the [Raspberry Pi Pixel Server](http://www.penguintutor.com/projects/pixel-server) to be installed on a suitable Raspberry Pi and configured.
