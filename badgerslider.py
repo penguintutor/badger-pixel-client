@@ -40,8 +40,6 @@ class BadgerSlider():
         self.display.text(str(left_value), 2, self.start_y+25)
         self.display.text(str(self.current_value), int(WIDTH / 2) - int(self.display.measure_text(str(self.max_value)) * 0.5) - 4, self.start_y+25)
         self.display.text(str(right_value), WIDTH - self.display.measure_text(str(right_value)) - 4, self.start_y+25)
-        
-        
 
     def draw_box (self, xpos, ypos, width, height):
         # top, left, right, bottom

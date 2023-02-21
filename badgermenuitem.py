@@ -55,7 +55,7 @@ class MenuItem():
         display.line (xpos+width, ypos, xpos+width, ypos+height)
         display.line (xpos, ypos+height, xpos+width, ypos+height)
         
-        # Temp - due to set_thickness not working
+        # No thickness option - so instead create wider box
         if self.selected:
             # Draw a second box - 1 pixel smaller
             display.line (xpos+1, ypos+1, xpos+width-1, ypos+1)
