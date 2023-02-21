@@ -3,9 +3,10 @@ from badger2040w import WIDTH, HEIGHT
 
 class MenuItem():
     
-    # Note that default font is not normally used - instead default from BadgerMenu is passed if none specified.
-    def __init__(self, text, reference, font="bitmap8", image="", pen=0, selected=False):
+    # Note that font and font_size are required, but normally set from BadgerMenu 
+    def __init__(self, text, reference, font, font_size, image="", pen=0, selected=False):
         self.text = text
+        self.font_size = font_size
         self.reference = reference
         self.image = image
         self.font = font
@@ -20,9 +21,9 @@ class MenuItem():
     
     def draw(self, display, xpos, ypos, width, height):
         display.set_pen(self.pen)
+        # Thickness only applies if using hershey fonts (eg. sans or serif)
         if self.selected :
             display.set_thickness (3)
-            display.thickness = 3
         else:
             display.set_thickness (1)
             
@@ -33,7 +34,7 @@ class MenuItem():
         if self.text != None and self.text != "":
             # Offset text
             display.set_font (self.font)
-            display.set_thickness (6)
+            #display.set_thickness (1)
             
             text_width = display.measure_text(self.text)
             # glyph option not included in micropython - so uset offset of 7
@@ -45,7 +46,7 @@ class MenuItem():
                 x_offset = 0
             y_offset = 7
             
-            display.text(self.text, xpos+x_offset, ypos+y_offset)
+            display.text(self.text, xpos+x_offset, ypos+y_offset, text_width, self.font_size)
             
     
     def draw_box (self, display, xpos, ypos, width, height):

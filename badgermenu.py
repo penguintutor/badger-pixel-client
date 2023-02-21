@@ -11,11 +11,13 @@ class BadgerMenu():
     # num_wide is the number of buttons to fit across the screen
     # Note that there is no checking that the text will fit
     #     you can however request the number pixels from get_item_width()
-    def __init__(self, display, pen=0, font="bitmap8", num_wide=3, num_high=3, start_x=0, start_y=0, end_x = WIDTH, end_y = HEIGHT):
+    def __init__(self, display, pen=0, font="bitmap8", font_size=2, num_wide=3, num_high=3,
+                 start_x=0, start_y=0, end_x = WIDTH, end_y = HEIGHT):
         self.menu_items = []
         self.display = display
         self.pen = pen
         self.font = font
+        self.font_size = font_size
         self.num_wide = num_wide
         self.num_high = num_high
         self.start_x = start_x
@@ -42,12 +44,14 @@ class BadgerMenu():
                 break
             
     # default font and pen color (black)
-    def add_item(self, text="", reference="", font=None, image="", pen=None):
+    def add_item(self, text="", reference="", font=None, font_size=None, image="", pen=None):
         if pen == None:
             pen = self.pen
         if font == None:
             font = self.font
-        self.menu_items.append(MenuItem(text, reference, font, image))
+        if font_size == None:
+            font_size = self.font_size
+        self.menu_items.append(MenuItem(text, reference, font, font_size, image))
         # if this is the first menu item then set it as selected by calling set menu with no options
         if (len(self.menu_items) == 1):
             self.set_menu_position()
