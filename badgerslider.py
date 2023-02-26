@@ -7,7 +7,9 @@ class BadgerSlider():
     
     # Allows default settings so as not to need passing
     # invert True means that large number is on left and small on right (not direction of slider)
-    def __init__(self, display, pen=0, font="bitmap8", font_size=2, min_value=0, max_value=100, start_value = 0, step_size=10, invert=False, start_x=0, start_y=0, end_x = WIDTH, end_y = HEIGHT):
+    def __init__(self, display, pen=0, font="bitmap8", font_size=2, min_value=0, max_value=100,
+                 start_value = 0, step_size=10, invert=False,
+                 start_x=0, start_y=0, end_x = WIDTH, end_y = HEIGHT):
         self.display = display
         self.pen = pen
         self.font = font

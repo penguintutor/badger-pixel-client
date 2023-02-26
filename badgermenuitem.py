@@ -37,13 +37,14 @@ class MenuItem():
             #display.set_thickness (1)
             
             text_width = display.measure_text(self.text)
-            # glyph option not included in micropython - so uset offset of 7
-            #text_height = display.measure_glyph(self.text)
             
             x_offset = int((width - text_width) / 2) + 1
             # Don't offset if text too big
             if x_offset < 1:
                 x_offset = 0
+            
+            # glyph option not included in micropython - so uset offset of 7
+            #text_height = display.measure_glyph(self.text)
             y_offset = 7
             
             display.text(self.text, xpos+x_offset, ypos+y_offset, text_width, self.font_size)
